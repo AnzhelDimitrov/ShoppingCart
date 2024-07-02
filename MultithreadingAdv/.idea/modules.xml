@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RegexHomework.iml" filepath="$PROJECT_DIR$/RegexHomework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultithreadingAdv.iml" filepath="$PROJECT_DIR$/MultithreadingAdv.iml" />
     </modules>
   </component>
 </project>
