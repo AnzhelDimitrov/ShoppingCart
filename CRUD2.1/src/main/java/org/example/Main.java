@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.IOException;
 import java.util.List;
 
 public class Main {
@@ -24,6 +25,16 @@ public class Main {
         List<Items> items = itemsDAO.getAllItems();
         for (Items item : items) {
             System.out.println(item);
+        }
+
+        try {
+            JsonUtil.toJsonFile("items.json", items);
+            List<Items> itemsFromJsonFile = JsonUtil.fromJsonFile("items.json", Items.class);
+            for (Items item : itemsFromJsonFile) {
+                System.out.println(item);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
         HibernateUtil.shutdown();
